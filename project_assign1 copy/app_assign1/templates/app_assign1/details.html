@@ -1,0 +1,7 @@
+{% extends 'app_assign1/base.html' %}
+{% block content %}
+<h1>{{ pest.name }}</h1>
+<img src="{% static pest.image_url %}" width="300">
+<p>{{ pest.full_desc }}</p>
+<a href="{% url 'list' %}">← Back to List</a>
+{% endblock %}

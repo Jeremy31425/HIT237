@@ -1,0 +1,14 @@
+{% extends 'app_assign1/base.html' %}
+{% load static %}
+{% block content %}
+<h1>Mango Pests and Diseases</h1>
+<ul>
+  {% for pest in pests %}
+    <li>
+      <h2><a href="{% url 'details' pest.id %}">{{ pest.name }}</a></h2>
+      <img src="{% static pest.image_url %}" width="200">
+      <p>{{ pest.short_desc }}</p>
+    </li>
+  {% endfor %}
+</ul>
+{% endblock %}

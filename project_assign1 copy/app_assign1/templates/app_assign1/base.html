@@ -1,0 +1,17 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mango Pest Information</title>
+    <link rel="stylesheet" href="{% static 'app_assign1/css/style.css' %}">
+</head>
+<body>
+    <nav>
+        <a href="{% url 'home' %}">Home</a> |
+        <a href="{% url 'list' %}">List</a> |
+        <a href="{% url 'about' %}">About</a>
+    </nav>
+    <hr>
+    {% block content %}{% endblock %}
+</body>
+</html>
